@@ -1,0 +1,12 @@
+{
+  "name": "clonebackend",
+  "version": "1.0.0",
+  "description": "A Fullstack project clone of VideoApp",
+  "license": "ISC",
+  "author": "Mozahid",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
