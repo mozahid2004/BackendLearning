@@ -1,15 +1,14 @@
 const asyncHandler = (requestHnadler) => {
-  (req,res,next) => {
-    Promise.resolve(requestHnadler(req,res,next)).catch((err) => next(err)); 
+  return (req, res, next) => {
+    Promise.resolve(requestHnadler(req, res, next)).catch((err) => next(err));
   }
 }
 
 
-export { asyncHandler }
 
 // const asyncHandler = (fn) => async (req,res,next) => {
 //   try {
-    
+
 //   } catch (error) {
 //     res.status(err.code || 500).json({
 //       success: false,
@@ -17,3 +16,5 @@ export { asyncHandler }
 //     })
 //   }
 // }
+
+export { asyncHandler }
