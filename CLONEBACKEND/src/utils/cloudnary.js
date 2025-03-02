@@ -18,7 +18,7 @@ const uploadOnCloudinary = async (localFilePath) => {
       resource_type: "auto"
     })
     console.log("File is uploadod on cloudinary successfully", imageUploaded.url);
-    // fs.unlinkSync(localFilePath)
+    fs.unlinkSync(localFilePath) //this line is removing imgage from folder aftr uploading to the dataBase
     return imageUploaded
   } catch (error) {
     await fs.unlinkSync(localFilePath) //remove the loccaly save temporaryly file
